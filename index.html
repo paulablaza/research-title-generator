@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Research Title Generator</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <main class="container-fluid">
+            <h1 class="title">Research Title Generator</h1>
+            <div class="grid">
+                <form id="research-title-form">
+                    <div class="input">
+                        <h4>Topic</h4>
+                        <textarea
+                            id="topic"
+                            placeholder="The impact of social media on mental health"
+                            maxlength="100"
+                            required
+                            rows="2"
+                        ></textarea>
+                    </div>
+
+                    <div class="input">
+                        <h4>Education</h4>
+                        <p>Ex. Grade 12 STEM</p>
+                        <input
+                            type="text"
+                            id="education"
+                            placeholder="Bachelor of Science in Information Systems"
+                            maxlength="50"
+                            required
+                        />
+                    </div>
+
+                    <div class="input">
+                        <h4>Research Length</h4>
+                        <select
+                            id="length"
+                            name="length"
+                            aria-label="Select your research length"
+                            required
+                        >
+                            <option selected disabled value="">
+                                Select your research length
+                            </option>
+                            <option value="1 month">Short (1 month)</option>
+                            <option value="3 months">Medium (3 months)</option>
+                            <option value="6 months">Long (6 months)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Generate Title</button>
+                </form>
+
+                <div class="result-container">
+                    <h1>Result:</h1>
+                    <h3 id="research-title">
+                        Please click on the "Generate Title" button.
+                    </h3>
+                    <h4>Research Gap</h4>
+                    <p id="research-gap"></p>
+                    <h4>Relevant Studies</h4>
+                    <div id="relevant-studies"></div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
